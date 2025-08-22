@@ -415,24 +415,37 @@ curl -X POST "http://localhost:8000/api/analyze-resume" \
 ```
 
 ### 🏢 Available Job Categories
+**Naukri Jobs:**
 - **Senior Python Developer** - TechCorp Solutions (₹25-35 LPA)
 - **Data Scientist** - DataTech Analytics (₹20-30 LPA)
 - **Full Stack Developer** - StartupXYZ (₹15-25 LPA)
 - **Machine Learning Engineer** - AI Innovations (₹30-45 LPA)
 - **DevOps Engineer** - CloudTech Systems (₹18-28 LPA)
+- **Mobile App Developer** - AppStudio (₹18-30 LPA) - Remote
+- **UI/UX Designer** - DesignHub (₹20-35 LPA) - Remote
+- **Cybersecurity Analyst** - SecureNet (₹25-40 LPA)
+- **QA Automation Engineer** - TestPro (₹18-30 LPA) - Remote
+- **Blockchain Developer** - CryptoTech (₹25-40 LPA) - Remote
+
+**LinkedIn Jobs:**
 - **Senior Software Engineer** - Google India (₹40-60 LPA)
 - **Product Manager** - Amazon (₹35-50 LPA)
 - **Frontend Developer** - Microsoft (₹25-40 LPA)
 - **Backend Engineer** - Netflix (₹30-45 LPA)
 - **Data Engineer** - Uber (₹22-35 LPA)
+- **Site Reliability Engineer** - Meta (₹35-55 LPA)
+- **Cloud Solutions Architect** - Salesforce (₹45-70 LPA) - Remote
+- **Game Developer** - Electronic Arts (₹25-40 LPA)
+- **AI Research Scientist** - OpenAI (₹50-80 LPA) - Remote
+- **Technical Program Manager** - Apple (₹40-65 LPA)
 
 ### 📈 System Statistics
 ```json
 {
-  "total_jobs": 10,
+  "total_jobs": 20,
   "platforms": {
-    "naukri": 5,
-    "linkedin": 5
+    "naukri": 10,
+    "linkedin": 10
   },
   "ai_agent": "active",
   "recommendations": "active",
@@ -452,14 +465,14 @@ Test Summary:
    Skipped: 0
    Success Rate: 100.0%
 
-Test Duration: 15.82 seconds
+Test Duration: 25.62 seconds
 
 ALL TESTS PASSED! System is ready for production!
 
 Key Test Results:
 ✅ System Health: PASS - Health endpoint responding
 ✅ AI Agent Init: PASS - Agent initialized successfully
-✅ AI Chat API: PASS - Confidence: 0.90-0.95, Response length: 389-1527 chars
+✅ AI Chat API: PASS - Confidence: 0.90-0.95, Response length: 392-2277 chars
 ✅ Resume Analysis API: PASS - Skills: 20, Experience: 1.0 years, Recommendations: 2
 ✅ Job Search API: PASS - Found 1 Python jobs, 1 Data Scientist jobs
 ✅ CLI Mode: PASS - CLI help and query processing working
@@ -502,8 +515,10 @@ pytest tests/test_api.py
 ### Latest Test Results (GPT-4o-mini)
 - **Success Rate**: 100% (19/19 tests passed)
 - **AI Chat Performance**: High confidence (0.90-0.95)
-- **Response Quality**: Detailed, contextual responses (131-2522 chars)
+- **Response Quality**: Detailed, contextual responses
 - **System Health**: All components operational
+- **Dataset**: 20 diverse job postings (10 Naukri + 10 LinkedIn)
+- **Test Duration**: 25.62 seconds
 
 ## 🔒 Security & Privacy
 
