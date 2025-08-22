@@ -124,7 +124,7 @@ class JobAssistantCLI:
     async def handle_resume_analysis(self):
         """Handle resume analysis request"""
         if not self.recommender:
-                            print("AI: Resume analysis service not available")
+            print("AI: Resume analysis service not available")
             return
         
         print("\nResume Analysis")
@@ -140,15 +140,15 @@ class JobAssistantCLI:
         resume_text = "\n".join(lines[:-1])  # Remove the last empty line
         
         if not resume_text.strip():
-                            print("AI: No resume text provided")
+            print("AI: No resume text provided")
             return
         
-                        print("\nAI: Analyzing your resume...")
+        print("\nAI: Analyzing your resume...")
         
         try:
             analysis = await self.recommender.analyze_resume(resume_text)
             
-                            print("\nResume Analysis Results:")
+            print("\nResume Analysis Results:")
             print(f"Skills identified: {', '.join(analysis.skills[:10])}")
             
             if analysis.experience_years:
@@ -169,11 +169,11 @@ class JobAssistantCLI:
             
         except Exception as e:
             logger.error(f"Error analyzing resume: {e}")
-                            print("AI: I encountered an error analyzing your resume. Please try again.")
+            print("AI: I encountered an error analyzing your resume. Please try again.")
     
     async def show_stats(self):
         """Show system statistics"""
-                        print("\nSystem Statistics:")
+        print("\nSystem Statistics:")
         print(f"AI Agent: {'Active' if self.agent else 'Inactive'}")
         print(f"Recommender: {'Active' if self.recommender else 'Inactive'}")
         print(f"Session ID: {self.session_id or 'None'}")
@@ -186,15 +186,15 @@ class JobAssistantCLI:
             return
         
         try:
-                            print(f"AI: Processing query: {query}")
+            print(f"AI: Processing query: {query}")
             response = await self.agent.query(query)
             
-                            print(f"\nAI: {response.response}")
+            print(f"\nAI: {response.response}")
             print(f"Confidence: {response.confidence:.2f}")
             
         except Exception as e:
             logger.error(f"Error processing query: {e}")
-                            print("AI: I encountered an error processing your query.")
+            print("AI: I encountered an error processing your query.")
 
 
 async def main():

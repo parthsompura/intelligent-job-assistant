@@ -30,7 +30,7 @@ class JobAssistantAgent:
         self.llm = ChatOpenAI(
             temperature=0.7,
             openai_api_key=self.openai_api_key,
-            model_name="gpt-3.5-turbo"
+            model_name="gpt-4o-mini"  # Using GPT-4o-mini for better performance
         )
         
         # Initialize components
