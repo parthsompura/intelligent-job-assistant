@@ -1,6 +1,28 @@
 # 🚀 Intelligent Job Assistant & Recommendation System
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-green.svg)](https://fastapi.tiangolo.com/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.0.350-orange.svg)](https://langchain.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5--turbo-purple.svg)](https://openai.com/)
+
 An AI-powered job intelligence system that provides intelligent job recommendations, resume analysis, and natural language job search capabilities.
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [🏗️ System Architecture](#️-system-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [🌟 Real-World Usage Examples](#-real-world-usage-examples)
+- [🔧 API Endpoints](#-api-endpoints)
+- [📊 Sample Data](#-sample-data)
+- [🧪 Testing](#-testing)
+- [🔒 Security & Privacy](#-security--privacy)
+- [🚀 Deployment](#-deployment)
+- [📋 Requirements](#-requirements)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🆘 Support](#-support)
 
 ## ✨ Features
 
