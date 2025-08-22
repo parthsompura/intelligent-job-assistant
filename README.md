@@ -466,11 +466,13 @@ PORT=8000
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
+1. Fork the [intelligent-job-assistant](https://github.com/parthsompura/intelligent-job-assistant) repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Make your changes
 4. Add tests for new functionality
-5. Submit a pull request
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a [Pull Request](https://github.com/parthsompura/intelligent-job-assistant/pulls)
 
 ## 📄 License
 
@@ -488,8 +490,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 - 📚 [API Documentation](http://localhost:8000/docs)
-- 🐛 [Issue Tracker](https://github.com/your-repo/issues)
-- 📧 [Email Support](mailto:support@example.com)
+- 🐛 [Issue Tracker](https://github.com/parthsompura/intelligent-job-assistant/issues)
+- 📧 [Email Support](mailto:sompuraparth7@gmail.com)
 
 ---
 
