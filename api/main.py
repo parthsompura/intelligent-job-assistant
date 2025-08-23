@@ -56,7 +56,8 @@ async def lifespan(app: FastAPI):
             logger.warning("OpenAI API key not found, AI features will be limited")
             job_agent = None
         else:
-            job_agent = JobAssistantAgent(openai_api_key)
+            # Pass jobs data to the AI agent for intelligent search
+            job_agent = JobAssistantAgent(openai_api_key, jobs_storage)
         
         job_recommender = JobRecommender()
         
@@ -315,6 +316,12 @@ async def scrape_naukri_background(query: str, limit: int):
                 jobs_storage.append(job)
                 saved_count += 1
         
+        # Update AI agent with new jobs data
+        global job_agent
+        if job_agent:
+            job_agent.update_jobs_data(jobs_storage)
+            logger.info(f"Updated AI agent with {len(jobs_storage)} jobs")
+        
         # Save to JSON file
         try:
             jobs_data = [job.dict() for job in jobs_storage]
@@ -345,6 +352,12 @@ async def scrape_linkedin_background(query: str, limit: int):
             if not any(existing_job.job_id == job.job_id for existing_job in jobs_storage):
                 jobs_storage.append(job)
                 saved_count += 1
+        
+        # Update AI agent with new jobs data
+        global job_agent
+        if job_agent:
+            job_agent.update_jobs_data(jobs_storage)
+            logger.info(f"Updated AI agent with {len(jobs_storage)} jobs")
         
         # Save to JSON file
         try:
